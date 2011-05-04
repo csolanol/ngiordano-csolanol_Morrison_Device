@@ -1,0 +1,36 @@
+#
+# system.prop for generic sdk
+#
+
+rild.libpath = /system/lib/libril-qc-1.so
+rild.libargs = -d /dev/smd0
+
+android.keylayout.adp5588_morrison = /system/usr/keylayout/adp5588_morrison.kl
+android.keychar.adp5588_morrison = /system/usr/keychars/adp5588_morrison.kl
+android.keylayout.headphone = /system/usr/keylayout/headphone.kl
+android.keychar.headphone = /system/usr/keychars/headphone.kcm
+
+wifi.interface = eth0
+# Time between scans in seconds. Keep it high to minimize battery drain.
+# This only affects the case in which there are remembered access points,
+# but none are in range.
+wifi.supplicant_scan_interval = 30
+
+# The interfaces to get DNS data from when using mobile data
+# Comma-separated
+mobiledata.interfaces=rmnet0
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+ro.opengles.version=65537
+debug.sf.hw=1
+
+# This is a high density device with more memory, so larger vm heaps for it.
+dalvik.vm.heapsize=32m
+
+# Increase SKIA decode memory capability for progressive jpg file
+ro.media.dec.jpeg.memcap=20000000
+
+# Persist default parameters
+persist.sys.use_dithering=0
+persist.sys.purgeable_assets=1
